@@ -34,7 +34,20 @@ var map = new ol.Map({
 var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
 map.addControl(layerSwitcher);
 
-map.getView().fit([-10334286.371685, 1547087.536376, -9773445.666009, 2044540.200654], map.getSize());
+    var searchLayer = new SearchLayer({
+      layer: lyr_Pavimentada2022_8,
+      colName: 'RUTA',
+      zoom: 10,
+      collapsed: true,
+      map: map
+    });
+
+    map.addControl(searchLayer);
+    document.getElementsByClassName('search-layer')[0]
+    .getElementsByTagName('button')[0].className +=
+    ' fa fa-binoculars';
+    
+map.getView().fit([-10320810.137960, 1545906.743295, -9759969.432284, 2043333.890559], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
