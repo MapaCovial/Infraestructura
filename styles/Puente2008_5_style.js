@@ -22,13 +22,13 @@ var style_Puente2008_5 = function(feature, resolution){
     }
     var style = [ new ol.style.Style({
         image: new ol.style.Icon({
-                  imgSize: [579.997, 700],
-                  scale: 0.037931230678779376,
-                  anchor: [11, 15],
+                  imgSize: [580, 580],
+                  scale: 0.03793103448275862,
+                  anchor: [11, 11],
                   anchorXUnits: "pixels",
                   anchorYUnits: "pixels",
                   rotation: 0.0,
-                  src: "styles/amenity=police.svg"
+                  src: "styles/background_security.svg"
             }),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,

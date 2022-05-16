@@ -176,9 +176,51 @@ var lyr_MunicipiosActualizadosLL_12 = new ol.layer.Vector({
                 interactive: true,
                 title: '<img src="styles/legend/MunicipiosActualizadosLL_12.png" /> MunicipiosActualizadosLL'
             });
+var format_CP2022_13 = new ol.format.GeoJSON();
+var features_CP2022_13 = format_CP2022_13.readFeatures(json_CP2022_13, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_CP2022_13 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_CP2022_13.addFeatures(features_CP2022_13);
+var lyr_CP2022_13 = new ol.layer.Vector({
+                declutter: true,
+                source:jsonSource_CP2022_13, 
+                style: style_CP2022_13,
+                interactive: true,
+                title: '<img src="styles/legend/CP2022_13.png" /> CP-2022'
+            });
+var format_Be2022_14 = new ol.format.GeoJSON();
+var features_Be2022_14 = format_Be2022_14.readFeatures(json_Be2022_14, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_Be2022_14 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_Be2022_14.addFeatures(features_Be2022_14);
+var lyr_Be2022_14 = new ol.layer.Vector({
+                declutter: true,
+                source:jsonSource_Be2022_14, 
+                style: style_Be2022_14,
+                interactive: true,
+                title: '<img src="styles/legend/Be2022_14.png" /> Be-2022'
+            });
+var format_Em2022_15 = new ol.format.GeoJSON();
+var features_Em2022_15 = format_Em2022_15.readFeatures(json_Em2022_15, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_Em2022_15 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_Em2022_15.addFeatures(features_Em2022_15);
+var lyr_Em2022_15 = new ol.layer.Vector({
+                declutter: true,
+                source:jsonSource_Em2022_15, 
+                style: style_Em2022_15,
+                interactive: true,
+                title: '<img src="styles/legend/Em2022_15.png" /> Em-2022'
+            });
 
-lyr_OSMStandard_0.setVisible(true);lyr_GoogleSatellite_1.setVisible(true);lyr_GoogleRoad_2.setVisible(true);lyr_Poblacion_LL_3.setVisible(false);lyr_Departamentos_GTM_4.setVisible(false);lyr_Puente2008_5.setVisible(false);lyr_DGC2022_6.setVisible(true);lyr_Terraceria2022_7.setVisible(true);lyr_Pavimentada2022_8.setVisible(true);lyr_FSS2022_9.setVisible(true);lyr_Kilometraje_10.setVisible(false);lyr_RiosLL_11.setVisible(false);lyr_MunicipiosActualizadosLL_12.setVisible(false);
-var layersList = [lyr_OSMStandard_0,lyr_GoogleSatellite_1,lyr_GoogleRoad_2,lyr_Poblacion_LL_3,lyr_Departamentos_GTM_4,lyr_Puente2008_5,lyr_DGC2022_6,lyr_Terraceria2022_7,lyr_Pavimentada2022_8,lyr_FSS2022_9,lyr_Kilometraje_10,lyr_RiosLL_11,lyr_MunicipiosActualizadosLL_12];
+lyr_OSMStandard_0.setVisible(true);lyr_GoogleSatellite_1.setVisible(true);lyr_GoogleRoad_2.setVisible(true);lyr_Poblacion_LL_3.setVisible(false);lyr_Departamentos_GTM_4.setVisible(false);lyr_Puente2008_5.setVisible(false);lyr_DGC2022_6.setVisible(true);lyr_Terraceria2022_7.setVisible(true);lyr_Pavimentada2022_8.setVisible(true);lyr_FSS2022_9.setVisible(true);lyr_Kilometraje_10.setVisible(false);lyr_RiosLL_11.setVisible(false);lyr_MunicipiosActualizadosLL_12.setVisible(false);lyr_CP2022_13.setVisible(true);lyr_Be2022_14.setVisible(true);lyr_Em2022_15.setVisible(true);
+var layersList = [lyr_OSMStandard_0,lyr_GoogleSatellite_1,lyr_GoogleRoad_2,lyr_Poblacion_LL_3,lyr_Departamentos_GTM_4,lyr_Puente2008_5,lyr_DGC2022_6,lyr_Terraceria2022_7,lyr_Pavimentada2022_8,lyr_FSS2022_9,lyr_Kilometraje_10,lyr_RiosLL_11,lyr_MunicipiosActualizadosLL_12,lyr_CP2022_13,lyr_Be2022_14,lyr_Em2022_15];
 lyr_Poblacion_LL_3.set('fieldAliases', {'codigo': 'codigo', 'cod_censo': 'cod_censo', 'departamen': 'departamen', 'municipio': 'municipio', 'lugar_pobl': 'lugar_pobl', 'categoria': 'categoria', });
 lyr_Departamentos_GTM_4.set('fieldAliases', {'DEPARTAMEN': 'DEPARTAMEN', 'Cod_Depto': 'Cod_Depto', 'CODIGO': 'CODIGO', });
 lyr_Puente2008_5.set('fieldAliases', {'TIPO_PUENT': 'TIPO_PUENT', 'CODIGO_RUT': 'CODIGO_RUT', 'DESCRICPIO': 'DESCRICPIO', 'ESTACION': 'ESTACION', 'NOMBRE_PUE': 'NOMBRE_PUE', 'TIPO_DE_VI': 'TIPO_DE_VI', 'LONGITUD': 'LONGITUD', });
@@ -189,6 +231,9 @@ lyr_FSS2022_9.set('fieldAliases', {'RUTA': 'RUTA', 'DESCRIPCIO': 'DESCRIPCIO', '
 lyr_Kilometraje_10.set('fieldAliases', {'Altitude': 'Altitude', 'Descriptio': 'Descriptio', 'Name1': 'Name1', 'Position': 'Position', 'Position X': 'Position X', 'Position Y': 'Position Y', 'Visible': 'Visible', 'field_8': 'field_8', });
 lyr_RiosLL_11.set('fieldAliases', {'NOMBRE': 'NOMBRE', });
 lyr_MunicipiosActualizadosLL_12.set('fieldAliases', {'COD_DEPT_1': 'COD_DEPT_1', 'COD_MUNI_1': 'COD_MUNI_1', 'NOMBRE_1': 'NOMBRE_1', 'DEPTO_1': 'DEPTO_1', 'AREA_KMÂ²_': 'AREA_KMÂ²_', 'PERIMETR_1': 'PERIMETR_1', });
+lyr_CP2022_13.set('fieldAliases', {'RUTA': 'RUTA', 'DESCRIPCIO': 'DESCRIPCIO', 'CP_2022': 'CP_2022', 'NOG': 'NOG', 'DEPARTAMEN': 'DEPARTAMEN', 'LONGITUD': 'LONGITUD', 'SUPER': 'SUPER', });
+lyr_Be2022_14.set('fieldAliases', {'RUTA': 'RUTA', 'DESCRIPCIO': 'DESCRIPCIO', 'PROYECTO': 'PROYECTO', 'NOG': 'NOG', 'DEPARTAMEN': 'DEPARTAMEN', });
+lyr_Em2022_15.set('fieldAliases', {'RUTA': 'RUTA', 'DESCRIPCIO': 'DESCRIPCIO', 'PROYECTO': 'PROYECTO', 'NOG': 'NOG', 'DEPARTAMEN': 'DEPARTAMEN', });
 lyr_Poblacion_LL_3.set('fieldImages', {'codigo': 'TextEdit', 'cod_censo': 'TextEdit', 'departamen': 'TextEdit', 'municipio': 'TextEdit', 'lugar_pobl': 'TextEdit', 'categoria': 'TextEdit', });
 lyr_Departamentos_GTM_4.set('fieldImages', {'DEPARTAMEN': 'TextEdit', 'Cod_Depto': 'Range', 'CODIGO': 'Range', });
 lyr_Puente2008_5.set('fieldImages', {'TIPO_PUENT': 'TextEdit', 'CODIGO_RUT': 'TextEdit', 'DESCRICPIO': 'TextEdit', 'ESTACION': 'TextEdit', 'NOMBRE_PUE': 'TextEdit', 'TIPO_DE_VI': 'TextEdit', 'LONGITUD': 'TextEdit', });
@@ -199,6 +244,9 @@ lyr_FSS2022_9.set('fieldImages', {'RUTA': 'TextEdit', 'DESCRIPCIO': 'TextEdit', 
 lyr_Kilometraje_10.set('fieldImages', {'Altitude': 'TextEdit', 'Descriptio': 'TextEdit', 'Name1': 'TextEdit', 'Position': 'TextEdit', 'Position X': 'TextEdit', 'Position Y': 'TextEdit', 'Visible': 'TextEdit', 'field_8': 'TextEdit', });
 lyr_RiosLL_11.set('fieldImages', {'NOMBRE': 'TextEdit', });
 lyr_MunicipiosActualizadosLL_12.set('fieldImages', {'COD_DEPT_1': 'TextEdit', 'COD_MUNI_1': 'TextEdit', 'NOMBRE_1': 'TextEdit', 'DEPTO_1': 'TextEdit', 'AREA_KMÂ²_': 'TextEdit', 'PERIMETR_1': 'TextEdit', });
+lyr_CP2022_13.set('fieldImages', {'RUTA': 'TextEdit', 'DESCRIPCIO': 'TextEdit', 'CP_2022': 'TextEdit', 'NOG': 'TextEdit', 'DEPARTAMEN': 'TextEdit', 'LONGITUD': 'TextEdit', 'SUPER': 'TextEdit', });
+lyr_Be2022_14.set('fieldImages', {'RUTA': 'TextEdit', 'DESCRIPCIO': 'TextEdit', 'PROYECTO': 'TextEdit', 'NOG': 'TextEdit', 'DEPARTAMEN': 'TextEdit', });
+lyr_Em2022_15.set('fieldImages', {'RUTA': 'TextEdit', 'DESCRIPCIO': 'TextEdit', 'PROYECTO': 'TextEdit', 'NOG': 'TextEdit', 'DEPARTAMEN': 'TextEdit', });
 lyr_Poblacion_LL_3.set('fieldLabels', {'codigo': 'header label', 'cod_censo': 'header label', 'departamen': 'header label', 'municipio': 'header label', 'lugar_pobl': 'header label', 'categoria': 'header label', });
 lyr_Departamentos_GTM_4.set('fieldLabels', {'DEPARTAMEN': 'header label', 'Cod_Depto': 'header label', 'CODIGO': 'header label', });
 lyr_Puente2008_5.set('fieldLabels', {'TIPO_PUENT': 'header label', 'CODIGO_RUT': 'header label', 'DESCRICPIO': 'header label', 'ESTACION': 'header label', 'NOMBRE_PUE': 'header label', 'TIPO_DE_VI': 'header label', 'LONGITUD': 'header label', });
@@ -209,6 +257,9 @@ lyr_FSS2022_9.set('fieldLabels', {'RUTA': 'header label', 'DESCRIPCIO': 'header 
 lyr_Kilometraje_10.set('fieldLabels', {'Altitude': 'no label', 'Descriptio': 'no label', 'Name1': 'no label', 'Position': 'no label', 'Position X': 'no label', 'Position Y': 'no label', 'Visible': 'no label', 'field_8': 'no label', });
 lyr_RiosLL_11.set('fieldLabels', {'NOMBRE': 'header label', });
 lyr_MunicipiosActualizadosLL_12.set('fieldLabels', {'COD_DEPT_1': 'header label', 'COD_MUNI_1': 'header label', 'NOMBRE_1': 'header label', 'DEPTO_1': 'header label', 'AREA_KMÂ²_': 'header label', 'PERIMETR_1': 'header label', });
-lyr_MunicipiosActualizadosLL_12.on('precompose', function(evt) {
+lyr_CP2022_13.set('fieldLabels', {'RUTA': 'header label', 'DESCRIPCIO': 'header label', 'CP_2022': 'header label', 'NOG': 'header label', 'DEPARTAMEN': 'header label', 'LONGITUD': 'header label', 'SUPER': 'header label', });
+lyr_Be2022_14.set('fieldLabels', {'RUTA': 'header label', 'DESCRIPCIO': 'header label', 'PROYECTO': 'header label', 'NOG': 'header label', 'DEPARTAMEN': 'header label', });
+lyr_Em2022_15.set('fieldLabels', {'RUTA': 'header label', 'DESCRIPCIO': 'header label', 'PROYECTO': 'header label', 'NOG': 'header label', 'DEPARTAMEN': 'header label', });
+lyr_Em2022_15.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
