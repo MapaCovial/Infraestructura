@@ -22,7 +22,7 @@ var style_Tumulos2013_21 = function(feature, resolution){
     }
     var style = [ new ol.style.Style({
         image: new ol.style.Icon({
-                  imgSize: [580, 580],
+                  imgSize: [580, 680],
                   scale: 0.032758620689655175,
                   anchor: [9, 9],
                   anchorXUnits: "pixels",
