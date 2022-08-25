@@ -37,20 +37,7 @@ layerSwitcher.hidePanel = function() {};
 layerSwitcher.showPanel();
 
 
-    var searchLayer = new SearchLayer({
-      layer: lyr_Pavimentada2022_7,
-      colName: 'RUTA',
-      zoom: 10,
-      collapsed: true,
-      map: map
-    });
-
-    map.addControl(searchLayer);
-    document.getElementsByClassName('search-layer')[0]
-    .getElementsByTagName('button')[0].className +=
-    ' fa fa-binoculars';
-    
-map.getView().fit([-10325120.941256, 1531470.448073, -9764224.477676, 2028637.021807], map.getSize());
+map.getView().fit([-10300495.133837, 1585157.423003, -9827238.742692, 2004884.506238], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
