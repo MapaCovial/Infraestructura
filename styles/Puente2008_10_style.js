@@ -22,7 +22,7 @@ var style_Puente2008_10 = function(feature, resolution){
     }
     var style = [ new ol.style.Style({
         image: new ol.style.Icon({
-                  imgSize: [580, 580],
+                  imgSize: [580, 680],
                   scale: 0.03793103448275862,
                   anchor: [11, 11],
                   anchorXUnits: "pixels",
