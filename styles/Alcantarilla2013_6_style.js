@@ -22,7 +22,7 @@ var style_Alcantarilla2013_6 = function(feature, resolution){
     }
     var style = [ new ol.style.Style({
         image: new ol.style.Icon({
-                  imgSize: [580, 680],
+                  imgSize: [680, 780],
                   scale: 0.032758620689655175,
                   anchor: [9, 9],
                   anchorXUnits: "pixels",
